@@ -3,8 +3,20 @@ from bs4 import BeautifulSoup
 import lxml
 
 
+from typing import Optional, Union
+
 class Tracker:
+    """Amazon product price tracker.
+    
+    Attributes:
+        url (str): Amazon product URL to track
+    """
     def __init__(self, url: str):
+        """Initialize tracker with product URL.
+        
+        Args:
+            url: Amazon product page URL
+        """
         self.url = url
 
     def get_price(self):
