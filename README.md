@@ -20,23 +20,12 @@ Regularly checking the price of a product can be tedious and time-consuming. Thi
   - `requests`: For sending HTTP requests to the Amazon product page.
   - `BeautifulSoup` from `bs4`: For parsing HTML and extracting the necessary data (product price and title).
   - `lxml`: Used as a parser for BeautifulSoup.
-  - `smtplib`: For sending the email alert.
 - **Script Flow**:
   1. **Setting Up the URL and Headers**: The script starts by defining the URL of the product and headers to mimic a browser request.
   2. **HTTP Request**: It sends a GET request to the Amazon product page.
   3. **HTML Parsing**: The response is parsed to extract the product price and title using BeautifulSoup.
   4. **Price Processing**: The price is processed and converted into a floating-point number for comparison.
-  5. **Email Notification**: If the product's price falls below the threshold, an email is composed and sent using SMTP protocol.
 
-## How to Use
-1. Replace `URL`, `BUY_PRICE`, `YOUR_SMTP_ADDRESS`, `YOUR_EMAIL`, and `YOUR_PASSWORD` with your desired product URL, price threshold, SMTP server address, and email credentials.
-2. Run the script periodically (e.g., using a cron job) to check for price updates.
-
-## Future Enhancements
-- Integrate with a scheduling tool for regular checks.
-- Extend functionality to monitor multiple products.
-- Include error handling for web requests and email sending process.
-- Implement a user-friendly interface for non-technical users.
 
 ## Disclaimer
 This project is intended for educational purposes. Be aware of Amazon's terms of service regarding web scraping.
